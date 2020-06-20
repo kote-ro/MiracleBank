@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Create transfer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div align="center">
+        <h1>Create transfer</h1>
+        <br />
+        <form action="#" th:action="@{/save}" th:object="${transfer}" method="post">
+            <table class="table" border="0" cellpadding="10">
+                <tr>
+                    <td>Description </td>
+                    <td>
+                        <input class="form-control" type="text" th:field="*{description}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Card sender</td>
+                    <td>
+                        <input class="form-control" type="text" th:field="*{cardSender}" placeholder="card-sender"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Card receiver</td>
+                    <td>
+                        <input class="form-control" type="text" th:field="*{cardReceiver}" placeholder="card-receiver"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button class="btn btn-primary" type="submit">Save</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>

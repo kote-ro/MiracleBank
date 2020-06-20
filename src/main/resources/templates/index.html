@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index-style.css}"/>
+    <title>Main</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/" th:href="@{/}">MiracleBank</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/" th:href="@{/send-money-form}">Transfers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/" th:href="@{/converter}">Converter</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/" th:href="@{/about-us}">About us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container-fluid bg-1 text-center">
+    <h3 class="margin">Кто мы?</h3>
+    <img th:src="@{pic/logo.jpg}" class="img-responsive img-circle margin" style="display:inline" width="350" height="350">
+    <h3>Мы - современный онлайн-банк</h3>
+</div>
+
+<div class="container-fluid bg-2 text-center">
+    <h3 class="margin">Наша стратегия</h3>
+    <p>Корпоративное поведение в MiracleBank построено на принципах законности, прозрачности, компетентности, на соблюдении прав и интересов клиентов, кредиторов банка, акционера и работников и направлено ​​на повышение эффективности деятельности банка, поддержание его финансовой стабильности и прибыльности. </p>
+</div>
+
+<footer class="container-fluid bg-4 text-center">
+    <p>MiracleBank Theme Made By Kotenko Ruslan</p>
+</footer>
+
+<script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+<script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+
+</body>
+</html>
