@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>About us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="text-center">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/" th:href="@{/}">MiracleBank</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/" th:href="@{/send-money-form}">Transfers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/" th:href="@{/converter}">Converter</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/" th:href="@{/about-us}">About us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="bg-light">
+    <div class="container py-5">
+        <div class="row h-100 align-items-center py-5">
+            <div class="col-lg-6">
+                <h1 class="display-4">About the bank</h1>
+                <p class="lead text-muted mb-0">We are a young growing bank</p>
+                <p class="lead text-muted">Founded in 2020, commercial bank MiracleBank is a representative of the country's banking market.<a href="https://bootstrapious.com/snippets" class="text-muted">
+                </a>
+                </p>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block"><img th:src="@{pic/logo.jpg}" alt="" class="img-fluid"></div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white py-5">
+    <div class="container py-5">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
+                <h2 class="font-weight-light">Our goal</h2>
+                <p class="font-italic text-muted mb-4">We help the economy to develop, businesses to grow, and private clients to fulfill their dreams by providing the highest quality financial services.</p>
+            </div>
+
+            <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img th:src="@{pic/flag.svg}" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-5 px-5 mx-auto"><img th:src="@{pic/icon.png}" class="img-fluid mb-4 mb-lg-0"></div>
+            <div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
+                <h2 class="font-weight-light">Relations with government bodies</h2>
+                <p class="font-italic text-muted mb-4">The Bank adheres to the principle of neutrality in relation to business groups, political parties and associations and operates in the interests of depositors, customers, creditors and shareholders.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

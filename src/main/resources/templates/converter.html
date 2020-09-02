@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@latest/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+    <script th:src="@{js/script.js}"></script>
+
+    <title>Converter</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/" th:href="@{/}">MiracleBank</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/" th:href="@{/send-money-form}">Transfers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/" th:href="@{/converter}">Converter</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/" th:href="@{/about-us}">About us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-lg">
+            <canvas id="canvas" width="400" height="250"></canvas>
+        </div>
+        <div class="col-sm">
+
+            <div class="alert alert-primary">
+                Currency converter
+            </div>
+
+            <div>
+                <select class="custom-select" id="select-in">
+                    <option value="rub">RUB</option>
+                    <option value="usd">USD</option>
+                    <option value="eur">EUR</option>
+                </select>
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" id="input">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon2">From</span>
+                </div>
+            </div>
+
+            <div>
+                <select class="custom-select" id="select-out">
+                    <option value="rub">RUB</option>
+                    <option value="usd">USD</option>
+                    <option value="eur">EUR</option>
+                </select>
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" id="output">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon2">To</span>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit" onclick="mainCalculate()">Convert</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm">
+            <table class="table">
+                <thead class="thead">
+                <tr>
+                    <th scope="col">Currency</th>
+                    <th scope="col">Buy</th>
+                    <th scope="col">Sell</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>USD</td>
+                    <td id="usd-buy"></td>
+                    <td id="usd-sale"></td>
+                </tr>
+                <tr>
+                    <td>EUR</td>
+                    <td id="eur-buy"></td>
+                    <td id="eur-sale"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
