@@ -12,22 +12,8 @@
     <title>Main</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/" th:href="@{/}">MiracleBank</a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/" th:href="@{/send-money-form}">Transfers</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/" th:href="@{/converter}">Converter</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/" th:href="@{/about-us}">About us</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+
+<div th:insert="~{navbar :: copy}"></div>
 
 <div class="container-fluid bg-1 text-center">
     <h3 class="margin">Who we are?</h3>
