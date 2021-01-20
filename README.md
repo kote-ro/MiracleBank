@@ -9,7 +9,7 @@
   </ol>
   <h2>Used stack</h2>
   <div>
-    <p><strong>Backend:</strong> Spring Boot, Maven, Spring Security, Hibernate, MySQL.</p>
+    <p><strong>Backend:</strong> Spring (MVC, Security, Data), Maven, Hibernate, MySQL.</p>
     <p><strong>Frontend:</strong> Bootstrap, Thymeleaf, Chart.js, jQuery.</p>
   </div>
   <h2>Currency value source</h2>
